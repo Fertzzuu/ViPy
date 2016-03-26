@@ -6,6 +6,7 @@ def nmapScan(tgtHost, tgtPort):
 	nmScan.scan(tgtHost, tgtPort)
 	state = nmScan[tgtHost]['tcp'][int(tgtPort)]['state']
 	print "[*] %s tcp/ %s %s" % tgtHost, tgtPort, state
+
 	
 def main():
 	parser = optparse.OprionParser("usage: %prog -h [target host] -p [target port]")
